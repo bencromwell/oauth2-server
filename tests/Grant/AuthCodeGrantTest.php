@@ -66,7 +66,7 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             $cookies = [],
             $queryParams = [
                 'response_type' => 'code',
-                'client_id'     => 'foo',
+                'client_id' => 'foo',
             ]
         );
 
@@ -97,8 +97,8 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [
                 'response_type' => 'code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://foo/bar',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
             ]
         );
 
@@ -129,8 +129,8 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [
                 'response_type' => 'code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://foo/bar',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
             ]
         );
 
@@ -161,9 +161,9 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'response_type'  => 'code',
-                'client_id'      => 'foo',
-                'redirect_uri'   => 'http://foo/bar',
+                'response_type' => 'code',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
                 'code_challenge' => 'FOOBAR',
             ]
         );
@@ -228,7 +228,7 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             $cookies = [],
             $queryParams = [
                 'response_type' => 'code',
-                'client_id'     => 'foo',
+                'client_id' => 'foo',
             ]
         );
 
@@ -263,8 +263,8 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [
                 'response_type' => 'code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://bar',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://bar',
             ]
         );
 
@@ -299,8 +299,8 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [
                 'response_type' => 'code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://bar',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://bar',
             ]
         );
 
@@ -336,8 +336,8 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [
                 'response_type' => 'code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://foo/bar',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
             ]
         );
 
@@ -372,10 +372,10 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'response_type'         => 'code',
-                'client_id'             => 'foo',
-                'redirect_uri'          => 'http://foo/bar',
-                'code_challenge'        => 'foobar',
+                'response_type' => 'code',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
+                'code_challenge' => 'foobar',
                 'code_challenge_method' => 'foo',
             ]
         );
@@ -476,17 +476,17 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
                             'auth_code_id' => uniqid(),
-                            'expire_time'  => time() + 3600,
-                            'client_id'    => 'foo',
-                            'user_id'      => 123,
-                            'scopes'       => ['foo'],
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
                             'redirect_uri' => 'http://foo/bar',
                         ]
                     )
@@ -545,20 +545,20 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'    => 'authorization_code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://foo/bar',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
                 'code_verifier' => 'foobar',
-                'code'          => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
-                            'auth_code_id'          => uniqid(),
-                            'expire_time'           => time() + 3600,
-                            'client_id'             => 'foo',
-                            'user_id'               => 123,
-                            'scopes'                => ['foo'],
-                            'redirect_uri'          => 'http://foo/bar',
-                            'code_challenge'        => 'foobar',
+                            'auth_code_id' => uniqid(),
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
+                            'redirect_uri' => 'http://foo/bar',
+                            'code_challenge' => 'foobar',
                             'code_challenge_method' => 'plain',
                         ]
                     )
@@ -617,20 +617,20 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'    => 'authorization_code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://foo/bar',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
                 'code_verifier' => 'foobar',
-                'code'          => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
-                            'auth_code_id'          => uniqid(),
-                            'expire_time'           => time() + 3600,
-                            'client_id'             => 'foo',
-                            'user_id'               => 123,
-                            'scopes'                => ['foo'],
-                            'redirect_uri'          => 'http://foo/bar',
-                            'code_challenge'        => urlencode(base64_encode(hash('sha256', 'foobar'))),
+                            'auth_code_id' => uniqid(),
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
+                            'redirect_uri' => 'http://foo/bar',
+                            'code_challenge' => urlencode(base64_encode(hash('sha256', 'foobar'))),
                             'code_challenge_method' => 'S256',
                         ]
                     )
@@ -674,15 +674,15 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'client_id'  => 'foo',
+                'client_id' => 'foo',
                 'grant_type' => 'authorization_code',
-                'code'       => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
-                            'auth_code_id'          => uniqid(),
-                            'expire_time'           => time() + 3600,
-                            'client_id'             => 'foo',
-                            'redirect_uri'          => 'http://foo/bar',
+                            'auth_code_id' => uniqid(),
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'redirect_uri' => 'http://foo/bar',
                         ]
                     )
                 ),
@@ -721,16 +721,16 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'client_id'  => 'foo',
+                'client_id' => 'foo',
                 'grant_type' => 'authorization_code',
                 'redirect_uri' => 'http://bar/foo',
-                'code'       => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
-                            'auth_code_id'          => uniqid(),
-                            'expire_time'           => time() + 3600,
-                            'client_id'             => 'foo',
-                            'redirect_uri'          => 'http://foo/bar',
+                            'auth_code_id' => uniqid(),
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'redirect_uri' => 'http://foo/bar',
                         ]
                     )
                 ),
@@ -775,10 +775,10 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'    => 'authorization_code',
-                'client_id'     => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'client_secret' => 'bar',
-                'redirect_uri'  => 'http://foo/bar',
+                'redirect_uri' => 'http://foo/bar',
             ]
         );
 
@@ -821,17 +821,17 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
                             'auth_code_id' => uniqid(),
-                            'expire_time'  => time() - 3600,
-                            'client_id'    => 'foo',
-                            'user_id'      => 123,
-                            'scopes'       => ['foo'],
+                            'expire_time' => time() - 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
                             'redirect_uri' => 'http://foo/bar',
                         ]
                     )
@@ -885,17 +885,17 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
                             'auth_code_id' => uniqid(),
-                            'expire_time'  => time() + 3600,
-                            'client_id'    => 'foo',
-                            'user_id'      => 123,
-                            'scopes'       => ['foo'],
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
                             'redirect_uri' => 'http://foo/bar',
                         ]
                     )
@@ -946,17 +946,17 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
                             'auth_code_id' => uniqid(),
-                            'expire_time'  => time() + 3600,
-                            'client_id'    => 'bar',
-                            'user_id'      => 123,
-                            'scopes'       => ['foo'],
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'bar',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
                             'redirect_uri' => 'http://foo/bar',
                         ]
                     )
@@ -1007,10 +1007,10 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => 'sdfsfsd',
+                'code' => 'sdfsfsd',
             ]
         );
 
@@ -1066,20 +1066,20 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'    => 'authorization_code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://foo/bar',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
                 'code_verifier' => 'nope',
-                'code'          => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
-                            'auth_code_id'          => uniqid(),
-                            'expire_time'           => time() + 3600,
-                            'client_id'             => 'foo',
-                            'user_id'               => 123,
-                            'scopes'                => ['foo'],
-                            'redirect_uri'          => 'http://foo/bar',
-                            'code_challenge'        => 'foobar',
+                            'auth_code_id' => uniqid(),
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
+                            'redirect_uri' => 'http://foo/bar',
+                            'code_challenge' => 'foobar',
                             'code_challenge_method' => 'plain',
                         ]
                     )
@@ -1139,20 +1139,20 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'    => 'authorization_code',
-                'client_id'     => 'foo',
-                'redirect_uri'  => 'http://foo/bar',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
+                'redirect_uri' => 'http://foo/bar',
                 'code_verifier' => 'nope',
-                'code'          => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
-                            'auth_code_id'          => uniqid(),
-                            'expire_time'           => time() + 3600,
-                            'client_id'             => 'foo',
-                            'user_id'               => 123,
-                            'scopes'                => ['foo'],
-                            'redirect_uri'          => 'http://foo/bar',
-                            'code_challenge'        => 'foobar',
+                            'auth_code_id' => uniqid(),
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
+                            'redirect_uri' => 'http://foo/bar',
+                            'code_challenge' => 'foobar',
                             'code_challenge_method' => 'S256',
                         ]
                     )
@@ -1212,19 +1212,19 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
-                            'auth_code_id'          => uniqid(),
-                            'expire_time'           => time() + 3600,
-                            'client_id'             => 'foo',
-                            'user_id'               => 123,
-                            'scopes'                => ['foo'],
-                            'redirect_uri'          => 'http://foo/bar',
-                            'code_challenge'        => 'foobar',
+                            'auth_code_id' => uniqid(),
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
+                            'redirect_uri' => 'http://foo/bar',
+                            'code_challenge' => 'foobar',
                             'code_challenge_method' => 'plain',
                         ]
                     )
@@ -1366,17 +1366,17 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
                             'auth_code_id' => uniqid(),
-                            'expire_time'  => time() + 3600,
-                            'client_id'    => 'foo',
-                            'user_id'      => 123,
-                            'scopes'       => ['foo'],
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
                             'redirect_uri' => 'http://foo/bar',
                         ]
                     )
@@ -1438,17 +1438,17 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
                             'auth_code_id' => uniqid(),
-                            'expire_time'  => time() + 3600,
-                            'client_id'    => 'foo',
-                            'user_id'      => 123,
-                            'scopes'       => ['foo'],
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
                             'redirect_uri' => 'http://foo/bar',
                         ]
                     )
@@ -1510,17 +1510,17 @@ class AuthCodeGrantTest extends \PHPUnit_Framework_TestCase
             [],
             [],
             [
-                'grant_type'   => 'authorization_code',
-                'client_id'    => 'foo',
+                'grant_type' => 'authorization_code',
+                'client_id' => 'foo',
                 'redirect_uri' => 'http://foo/bar',
-                'code'         => $this->cryptStub->doEncrypt(
+                'code' => $this->cryptStub->doEncrypt(
                     json_encode(
                         [
                             'auth_code_id' => uniqid(),
-                            'expire_time'  => time() + 3600,
-                            'client_id'    => 'foo',
-                            'user_id'      => 123,
-                            'scopes'       => ['foo'],
+                            'expire_time' => time() + 3600,
+                            'client_id' => 'foo',
+                            'user_id' => 123,
+                            'scopes' => ['foo'],
                             'redirect_uri' => 'http://foo/bar',
                         ]
                     )
